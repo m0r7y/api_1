@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/src/css/main.css">
+</head>
+
+<body>
+    <form action="" type="POST">
+        <div>
+            <div>
+                Order number : <input name="order" type="text">
+            </div>
+            <div>
+                Customer : <input name="partner" type="text">
+            </div>
+        </div>
+        <table id="main-table">
+            <thead>
+                <th>
+                    Article
+                </th>
+                <th>
+                    Qty
+                </th>
+                <th>
+                    Price
+                </th>
+            </thead>
+            <tbody>
+                <tr class="one2many">
+                    <td><input name="article" type="text"></td>
+                    <td><input name="qty" type="number"></td>
+                    <td><input name="price" type="number"></td>
+                    <td><img class="removeline" src="static/src/img/trash-solid.svg"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div id="addline">Ajouter ligne</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script type="text/javascript" src="static/src/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="static/src/js/main.js"></script>
+</body>
+
+</html>
