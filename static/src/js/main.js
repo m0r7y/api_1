@@ -3,6 +3,7 @@ $(document).ready(function () {
         $('form').find(':input').each(function () {
             $(this).attr('readonly', true);
         })
+        // find proper way to do that
         $('#addline').addClass('d-none');
         $('.removeline').addClass('d-none');
     }
@@ -11,6 +12,7 @@ $(document).ready(function () {
         $('form').find(':input').each(function () {
             $(this).attr('readonly', false);
         })
+        // find proper way to do that
         $('#addline').removeClass('d-none');
         $('.removeline').removeClass('d-none');
     }
