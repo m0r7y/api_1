@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    function editFalse() {
+        $('form').find(':input').each(function () {
+            $(this).attr('readonly', true);
+        })
+        $('#addline').addClass('d-none');
+        $('.removeline').addClass('d-none');
+    }
+
+    function editTrue() {
+        $('form').find(':input').each(function () {
+            $(this).attr('readonly', false);
+        })
+        $('#addline').removeClass('d-none');
+        $('.removeline').removeClass('d-none');
+    }
+
+    // make form not editable on load
+    editFalse();
+
     $('#main-table').on('click', '#addline', function () {
         var $newLine = $('.one2many').last().clone();
         $(this).closest('tr').before($newLine);
@@ -9,4 +28,12 @@ $(document).ready(function () {
             $(this).closest('tr').remove();
         }
     });
+
+    $('#modify').on('click', function name() {
+        editTrue();
+    })
+
+    $('#cancel').on('click', function name() {
+        editFalse();
+    })
 });
